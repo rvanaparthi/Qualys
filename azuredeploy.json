@@ -6,23 +6,23 @@
             "defaultValue": "Qualys",
             "type": "string"
         },  
-        "workspaceID": {
+        "WorkspaceID": {
             "type": "string",
-            "defaultValue": "<workspaceID>"
+            "defaultValue": "<WorkspaceID>"
         },
-        "workspaceKey": {
+        "WorkspaceKey": {
             "type": "string",
-            "defaultValue": "<workspaceKey>"
+            "defaultValue": "<WorkspaceKey>"
         },
-        "apiusername": {
+        "APIUsername": {
             "type": "string",
-            "defaultValue": "<apiusername>"
+            "defaultValue": "<APIUsername>"
         },
-        "apipassword": {
+        "APIPassword": {
             "type": "string",
-            "defaultValue": "<apipassword>"
+            "defaultValue": "<APIPassword>"
         },
-        "uri": {
+        "Uri": {
             "type": "string",
             "defaultValue": "https://qualysapi.qg2.apps.qualys.com/api/2.0/fo/asset/host/vm/detection/?action=list&detection_processed_after="
         }
@@ -171,11 +171,11 @@
                         "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(parameters('FunctionName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(parameters('FunctionName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                         "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(parameters('FunctionName')),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', toLower(parameters('FunctionName'))), '2019-06-01').keys[0].value, ';EndpointSuffix=core.windows.net')]",
                         "WEBSITE_CONTENTSHARE": "[toLower(parameters('FunctionName'))]",
-                        "workspaceID": "[parameters('workspaceID')]",
-                        "workspaceKey": "[parameters('workspaceKey')]",
-                        "apiusername": "[parameters('apiusername')]",
-                        "apipassword": "[parameters('apipassword')]",
-                        "uri": "[parameters('uri')]",
+                        "WorkspaceID": "[parameters('WorkspaceID')]",
+                        "WorkspaceKey": "[parameters('WorkspaceKey')]",
+                        "APIUsername": "[parameters('APIUsername')]",
+                        "APIPassword": "[parameters('APIPassword')]",
+                        "Uri": "[parameters('Uri')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/rvanaparthi/Qualys/blob/master/QualysDataConnector.zip?raw=true"
                                  } 
                 }

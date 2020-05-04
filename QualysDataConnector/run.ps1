@@ -22,9 +22,9 @@ if ($Timer.IsPastDue) {
 
 # Define the Log Analytics Workspace ID and Key
 
-$CustomerId = $env:workspaceId
+$CustomerId = $env:WorkspaceId
 
-$SharedKey = $env:workspaceKey
+$SharedKey = $env:WorkspaceKey
 
 $TimeStampField = "DateValue"
 
@@ -32,13 +32,13 @@ $TimeStampField = "DateValue"
 
 # Build the headers for the ProofPoint API request
 
-$username = $env:apiuserName
+$username = $env:APIUsername
 
-$password = $env:apipassword
+$password = $env:APIPassword
 
 $hdrs = @{"X-Requested-With"="PowerShell"}
 
-$base = "$env:uri" 
+$base = "$env:Uri" 
 
 Write-Host $base
 
